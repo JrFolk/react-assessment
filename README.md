@@ -5,20 +5,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions.md) for instructions on running the application locally.
 
 ### Instructions
-```
-A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
+> A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
 
-Interview coding assignment below.
+> Interview coding assignment below.
 
-A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent over $50 in each transaction
+> A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent over $50 in each transaction
 
-(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
+> (e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
-Given a record of every transaction during a three month period, calculate the reward points earned for each customer per month and total.
+> Given a record of every transaction during a three month period, calculate the reward points earned for each customer per month and total.
 
-Make up a data set to best demonstrate your solution
-Check solution into GitHub
-```
+> Make up a data set to best demonstrate your solution
+> Check solution into GitHub
+
 ### Making the Dataset
 
 ###### Note: [`api.js`](src/api.js) purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
@@ -37,12 +36,10 @@ The raw data comes as an array of objects with the form: `[{ date, month, purcha
 ```
 
 ##### The Algorithm
+>A customer receives 2 points for every dollar spent over $100 in each transaction,
+plus 1 point for every dollar spent over $50 in each transaction
 
-```
-A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent over $50 in each transaction
-
-(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
-```
+>(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
 Implamentation is pretty straightforward, and exported as a utility function:
 ``` javascript
