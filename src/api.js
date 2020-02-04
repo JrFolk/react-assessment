@@ -39,8 +39,4 @@ export const calcScore = (price) => {
 }
 
 // async to mimic an actual fetch
-export const getTransactionsSince = async (startDate) => {
-    const rawData = generateData(startDate)
-    return reduceTransactionByMonth(rawData)
-}
-
+export const getTransactionsSince = async (startDate) => reduceTransactionByMonth(generateData(startDate))
