@@ -21,7 +21,7 @@ Check solution into GitHub
 ```
 ### Making the Dataset
 
-###### Note: `api.js` purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
+###### Note: [`api.js`](src/api.js) purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
 
 ##### Generating Raw Data
 
@@ -54,22 +54,21 @@ export const calcScore = (price) => {
 ```
 ### React
 
-The app consists of a single page-view `App.js`, a container to display a flexible number of months in a flexible grid `MonthlyScores.js`, and an individual card component which takes in the data for a single month, calculates the score and displays the results.
-`contexts.js` is included purely as a demonstration of an effective use of reacts's context api, in this case it simply provides application wide locale support, which is used in displaying the monetary values.   
+The app consists of a single page-view [`App.js`](src/App.js), a container to display a flexible number of months in a flexible grid, [`MonthlyScores.js`](src/MonthlyScores.js), and an individual card component which takes in the data for a single month, calculates the score and displays the results.
+[`contexts.js`](src/contexts.js) is included purely as a demonstration of an effective use of reacts's context api, in this case it simply provides application wide locale support, which is used in displaying the monetary values.   
 
 Inside of components I try to use naming conventions and logical structures that _hopefully_ produce self-documenting code for those who are familiar with modern react.js, so I'll just explain some design decisions.
 
-##### [`<MonthlyScores />`](https://github.com/JrFolk/react-assessment/blob/master/src/MonthlyScores.js)
+##### [`<MonthlyScores />`](src/MonthlyScores.js)
 
-Because we only want the (mock) fetch to happen when the commponent mounts, or when the prop `count` changes, indicating a different dataset is desired, `getTransactionsSince` is called inside of a [`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook, with only count provided in the dependency array.  
+Because we only want the (mock) fetch to happen when the commponent mounts, or when the prop `count` changes, indicating a different dataset is desired, [`getTransactionsSince`](src/api.js#L42) is called inside of a [`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook, with only count provided in the dependency array.  
 The `count` `prop` is used to determine how many months to fetch & display should it need to be adapted to accomodate a different number of months.
 
-##### [`<ScoreCard />`](https://github.com/JrFolk/react-assessment/blob/master/src/ScoreCard.js)
+##### [`<ScoreCard />`](src/ScoreCard.js)
 
 Because `calcScore` could _potentially_ be an arbitrarily expensive calculation we only want to call it on initial render or anytime the `transactions` data changes, thus it is called inside of a [`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook with the `transactions` as the only dependency.
 
-The `LocaleContext` from `contexts.js` is used to store the parameters passed to `number.toLocaleString` which formats the numbers & currency string.
-
+The `LocaleContext` from [`contexts.js`](src/contexts.js) is used to store the parameters passed to [`number.toLocaleString`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString).
 # Voilà
 
 ![screenshot.png](https://github.com/JrFolk/react-assessment/blob/master/screenshot.png?raw=true)
