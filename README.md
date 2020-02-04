@@ -26,7 +26,7 @@ Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions
 
 I decided to generate raw data as it would likely appear if it were being read directly from a relational database.  
 The raw data comes as an array of objects with the form: `[{ date, month, purchaseAmmount }, ...]`.
-`reduceTransactionByMonth` and `monthReducer` are utility functions to coallate the data into a more usable form:
+`reduceTransactionByMonth` and `monthReducer` are used to coallate the data into a more usable form:
 
 ```
   [{
@@ -41,7 +41,7 @@ plus 1 point for every dollar spent over $50 in each transaction
 >
 >(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
-Implamentation is pretty straightforward, and exported as a utility function for the rest of the application:
+Implamentation is pretty straightforward:
 ``` javascript
 export const calcScore = (price) => {
     if (price < 50) return 0
