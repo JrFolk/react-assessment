@@ -54,7 +54,7 @@ export const calcScore = (price) => {
 ```
 ### React
 
-The app consists of a single page-view [`App.js`](src/App.js), a container to display a flexible number of months in a flexible grid, [`MonthlyScores.js`](src/MonthlyScores.js), and an individual card component which takes in the data for a single month, calculates the score and displays the results.
+The app consists of a single page-view [`App.js`](src/App.js), a container to display a flexible number of months in a flexible grid, [`MonthlyScores.js`](src/MonthlyScores.js), and an individual card component [`ScoreCard.js`](src/ScoreCard.js), which takes in the data for a single month then calculates the score and displays the results.
 [`contexts.js`](src/contexts.js) is included purely as a demonstration of an effective use of reacts's context api, in this case it simply provides application wide locale support, which is used in displaying the monetary values.   
 
 Inside of components I try to use naming conventions and logical structures that _hopefully_ produce self-documenting code for those who are familiar with modern react.js, so I'll just explain some design decisions.
