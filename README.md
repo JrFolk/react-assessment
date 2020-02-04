@@ -70,3 +70,5 @@ The `LocaleContext` from [`contexts.js`](src/contexts.js) is used to store the p
 
 ![screenshot.png](https://github.com/JrFolk/react-assessment/blob/master/screenshot.png?raw=true)
 
+#### concession
+In the interest of clarity I tried to keep the directory plumbing to a minimum, so please forgive the unrelated utils in with the api adapter & such. I swear this usually never happens :)
