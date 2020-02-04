@@ -59,12 +59,12 @@ The app consists of a single page-view [`App.js`](src/App.js), a container to di
 
 Inside of components I try to use naming conventions and logical structures that _hopefully_ produce self-documenting code for those who are familiar with modern react.js, so I'll just explain some design decisions.
 
-##### [`<MonthlyScores />`](src/MonthlyScores.js)
+#### [`<MonthlyScores />`](src/MonthlyScores.js)
 
 Because we only want the (mock) fetch to happen when the commponent mounts, or when the prop `count` changes, indicating a different dataset is desired, [`getTransactionsSince`](src/api.js#L42) is called inside of a [`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook, with only count provided in the dependency array.  
 The `count` `prop` is used to determine how many months to fetch & display should it need to be adapted to accomodate a different number of months.
 
-##### [`<ScoreCard />`](src/ScoreCard.js)
+#### [`<ScoreCard />`](src/ScoreCard.js)
 
 Because `calcScore` could _potentially_ be an arbitrarily expensive calculation we only want to call it on initial render or anytime the `transactions` data changes, thus it is called inside of a [`useEffect`](https://reactjs.org/docs/hooks-reference.html#useeffect) hook with the `transactions` as the only dependency.
 
