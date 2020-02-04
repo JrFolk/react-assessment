@@ -41,7 +41,7 @@ plus 1 point for every dollar spent over $50 in each transaction
 >
 >(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
-Implamentation is pretty straightforward:
+implementation is pretty straightforward:
 ``` javascript
 export const calcScore = (price) => {
     if (price < 50) return 0
