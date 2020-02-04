@@ -70,7 +70,7 @@ Because `calcScore` could _potentially_ be an arbitrarily expensive calculation 
 
 The `LocaleContext` from `contexts.js` is used to store the parameters passed to `number.toLocaleString` which formats the numbers & currency string.
 
-# Voila
+# Voilà
 
 ![screenshot.png](https://github.com/JrFolk/react-assessment/blob/master/screenshot.png?raw=true)
 
