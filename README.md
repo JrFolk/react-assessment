@@ -72,3 +72,5 @@ The `LocaleContext` from [`contexts.js`](src/contexts.js) is used to store the p
 
 #### concession
 In the interest of clarity I tried to keep the directory plumbing to a minimum, so please forgive the unrelated utils in with the api adapter & such. I swear this usually never happens :)
+
+#Thank you for your time and consideration!
