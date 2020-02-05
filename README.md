@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions.md) for instructions on running the application locally.
 
-### Instructions
+# Instructions
 > A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
 >
 > Interview coding assignment below.
@@ -18,7 +18,7 @@ Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions
 > Make up a data set to best demonstrate your solution
 > Check solution into GitHub
 
-### The Dataset
+# The Dataset
 
 ###### Note: [`api.js`](src/api.js) purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
 
@@ -49,7 +49,7 @@ export const calcScore = (price) => {
     return (price - 100) * 2 + 50
 }
 ```
-### React
+# React
 
 The app consists of a single page-view [`App.js`](src/App.js), a container to display an arbitrary number of months in a flexible grid, [`MonthlyScores.js`](src/MonthlyScores.js), and an individual card component [`ScoreCard.js`](src/ScoreCard.js), which takes in the data for a single month then calculates the score and displays the results.
 [`contexts.js`](src/contexts.js) is included purely as a demonstration of an effective use of reacts's context api, in this case it simply provides application wide locale support, which is used in displaying the monetary values.   
