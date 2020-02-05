@@ -18,7 +18,7 @@ Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions
 > Make up a data set to best demonstrate your solution
 > Check solution into GitHub
 
-### Making the Dataset
+### The Dataset
 
 ###### Note: [`api.js`](src/api.js) purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
 
