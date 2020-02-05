@@ -22,7 +22,7 @@ Check [here](https://github.com/JrFolk/react-assessment/blob/master/instructions
 
 ###### Note: [`api.js`](src/api.js) purposefully obfuscates the details of data generation and exports the async function `getTransactionsSince` as a mock endpoint so that the react portion of the app could be built as if it was going to operate in the real world.
 
-##### Generating Raw Data
+#### Generating Raw Data
 
 I decided to generate raw data as it would likely appear if it were being read directly from a relational database.  
 The raw data comes as an array of objects with the form: `[{ date, month, purchaseAmmount }, ...]`.
@@ -35,7 +35,7 @@ The raw data comes as an array of objects with the form: `[{ date, month, purcha
   }, ...]
 ```
 
-##### The Algorithm
+#### The Algorithm
 >A customer receives 2 points for every dollar spent over $100 in each transaction,
 plus 1 point for every dollar spent over $50 in each transaction
 >
